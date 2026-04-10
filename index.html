@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Atkinson Conference on Economic and Social Inequality</title>
+    <meta name="description" content="A two-day interdisciplinary conference on economic and social inequality at Nuffield College, University of Oxford. 10–11 September 2026.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --oxford-blue: #002147;
+            --oxford-blue-light: #0a3060;
+            --nuffield-teal: #1a8a7d;
+            --nuffield-teal-light: #e6f5f3;
+            --warm-gold: #c7a94e;
+            --warm-gold-light: #f5f0e0;
+            --light-bg: #faf9f6;
+            --white: #ffffff;
+            --text: #2c2c2c;
+            --muted: #6b6b6b;
+            --border: #e2dfd8;
+            --border-light: #eeecea;
+            --shadow-sm: 0 1px 3px rgba(0,33,71,0.06);
+            --shadow-md: 0 4px 12px rgba(0,33,71,0.08);
+            --shadow-lg: 0 8px 30px rgba(0,33,71,0.10);
+            --radius: 10px;
+            --radius-lg: 14px;
+
+            --session-a: #e8f0fe;
+            --session-b: #fef3e0;
+            --session-c: #e8f5e9;
+            --plenary: #f3e5f5;
+            --social: #fff3e0;
+            --break-bg: #f5f5f5;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Cormorant Garamond', 'Georgia', serif;
+            background: var(--light-bg);
+            color: var(--text);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .sans {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .container {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        /* ── Navigation ── */
+        nav {
+            background: var(--oxford-blue);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            font-family: 'Inter', sans-serif;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+        }
+
+        nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav .nav-brand {
+            color: var(--warm-gold);
+            font-size: 0.82em;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            padding: 14px 0;
+            white-space: nowrap;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2px;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.72);
+            text-decoration: none;
+            font-size: 0.78em;
+            font-weight: 500;
+            padding: 14px 11px;
+            display: block;
+            transition: color 0.2s;
+            letter-spacing: 0.01em;
+        }
+
+        nav a:hover, nav a:focus { color: var(--warm-gold); }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--warm-gold);
+            font-size: 1.4em;
+            cursor: pointer;
+            padding: 14px 0;
+        }
+
+        /* ── Hero ── */
+        header {
+            background: linear-gradient(170deg, var(--oxford-blue) 0%, var(--oxford-blue-light) 60%, #0d3868 100%);
+            color: white;
+            padding: 80px 0 72px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -60%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(199,169,78,0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -40%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(26,138,125,0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        header .container { position: relative; z-index: 1; }
+
+        .hero-overline {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.72em;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--warm-gold);
+            margin-bottom: 16px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            margin-bottom: 6px;
+            line-height: 1.15;
+        }
+
+        header .subtitle {
+            font-size: 1.35em;
+            color: rgba(255,255,255,0.7);
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        header .details {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.92em;
+            font-weight: 400;
+            opacity: 0.8;
+            line-height: 1.9;
+        }
+
+        .logo-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+            margin-top: 36px;
+            flex-wrap: wrap;
+        }
+
+        .logo-row img {
+            height: 48px;
+            width: auto;
+            background: #ffffff;
+            padding: 10px 16px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            transition: transform 0.2s;
+        }
+
+        .logo-row img:hover { transform: translateY(-1px); }
+
+        .logo-row .logo-divider { display: none; }
+
+        .cta-row {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 36px;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 13px 30px;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85em;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            letter-spacing: 0.01em;
+        }
+
+        .cta-primary {
+            background: var(--nuffield-teal);
+            color: white;
+            box-shadow: 0 2px 10px rgba(26,138,125,0.3);
+        }
+        .cta-primary:hover { background: #17796e; transform: translateY(-1px); }
+
+        .cta-secondary {
+            background: rgba(255,255,255,0.08);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.25);
+        }
+        .cta-secondary:hover { background: rgba(255,255,255,0.14); }
+
+        /* ── Sections ── */
+        section { padding: 64px 0; }
+        section + section { border-top: 1px solid var(--border-light); }
+
+        h2 {
+            font-size: 1.8em;
+            font-weight: 500;
+            color: var(--oxford-blue);
+            margin-bottom: 8px;
+        }
+
+        .section-lead {
+            font-size: 1.02em;
+            color: var(--muted);
+            margin-bottom: 28px;
+            max-width: 680px;
+        }
+
+        h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95em;
+            font-weight: 700;
+            color: var(--oxford-blue);
+            margin: 32px 0 10px;
+            letter-spacing: 0.01em;
+        }
+
+        p, li { font-size: 1.02em; margin-bottom: 10px; }
+        ul { padding-left: 22px; }
+
+        a { color: var(--nuffield-teal); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* ── Cards ── */
+        .card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        /* ── About ── */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 5fr 3fr;
+            gap: 36px;
+            margin-top: 20px;
+        }
+
+        .about-main p { font-size: 1.05em; line-height: 1.75; }
+
+        .about-sidebar {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: var(--shadow-sm);
+            align-self: start;
+            position: sticky;
+            top: 72px;
+        }
+
+        .about-sidebar h3 {
+            margin-top: 0;
+            font-size: 0.88em;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--nuffield-teal);
+            border-bottom: 2px solid var(--nuffield-teal-light);
+            padding-bottom: 10px;
+            margin-bottom: 16px;
+        }
+
+        .sidebar-item {
+            margin-bottom: 14px;
+        }
+
+        .sidebar-item .sidebar-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.72em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--muted);
+        }
+
+        .sidebar-item .sidebar-value {
+            font-size: 0.95em;
+            font-weight: 500;
+        }
+
+        /* ── Call for Papers ── */
+        .cfp-box {
+            background: var(--white);
+            border: 1px solid var(--nuffield-teal);
+            border-left: 4px solid var(--nuffield-teal);
+            border-radius: var(--radius);
+            padding: 32px 36px;
+            margin: 28px 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .cfp-box h3 {
+            margin-top: 0;
+            color: var(--nuffield-teal);
+        }
+
+        .track-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 18px;
+            margin: 18px 0 8px;
+        }
+
+        .track-card {
+            background: var(--cream);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 22px 24px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .track-card .track-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.68em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--nuffield-teal);
+            margin-bottom: 4px;
+        }
+
+        .track-card h4 {
+            margin: 0 0 10px;
+            color: var(--oxford-blue);
+            font-size: 1.1em;
+        }
+
+        .track-card p {
+            font-size: 0.92em;
+            margin: 8px 0;
+        }
+
+        .track-card ul {
+            font-size: 0.92em;
+            margin: 6px 0 10px 20px;
+            padding: 0;
+        }
+
+        .track-card ul li { margin-bottom: 4px; }
+
+        .track-card .submit-link {
+            margin-top: auto;
+            padding-top: 14px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.88em;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+
+        .topic-item {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px 20px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.84em;
+            line-height: 1.5;
+            box-shadow: var(--shadow-sm);
+            transition: border-color 0.2s;
+        }
+
+        .topic-item:hover { border-color: var(--nuffield-teal); }
+
+        .topic-item strong {
+            color: var(--oxford-blue);
+            display: block;
+            margin-bottom: 2px;
+            font-size: 0.92em;
+        }
+
+        .topic-item span {
+            color: var(--muted);
+            font-size: 0.92em;
+        }
+
+        /* ── Keynote Cards ── */
+        .keynote-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 24px 0;
+        }
+
+        .keynote-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+
+        .keynote-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .keynote-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+        }
+
+        .keynote-card:nth-child(1)::before { background: var(--nuffield-teal); }
+        .keynote-card:nth-child(2)::before { background: var(--warm-gold); }
+        .keynote-card:nth-child(3)::before { background: var(--oxford-blue); }
+
+        .keynote-card .role-tag {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.68em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 14px;
+        }
+
+        .keynote-card:nth-child(1) .role-tag { background: var(--nuffield-teal-light); color: var(--nuffield-teal); }
+        .keynote-card:nth-child(2) .role-tag { background: var(--warm-gold-light); color: #8a7430; }
+        .keynote-card:nth-child(3) .role-tag { background: #e8edf4; color: var(--oxford-blue); }
+
+        .keynote-card .name {
+            font-size: 1.25em;
+            font-weight: 600;
+            color: var(--oxford-blue);
+            margin-bottom: 4px;
+        }
+
+        .keynote-card .affiliation {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8em;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+
+        .keynote-header {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+
+        .keynote-photo {
+            width: 78px;
+            height: 78px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 25%;
+            flex-shrink: 0;
+            border: 2px solid var(--border);
+            background: var(--cream);
+        }
+
+        .keynote-card:nth-child(1) .keynote-photo { border-color: var(--nuffield-teal-light); }
+        .keynote-card:nth-child(2) .keynote-photo { border-color: var(--warm-gold-light); }
+        .keynote-card:nth-child(3) .keynote-photo { border-color: #e8edf4; }
+
+        .keynote-header .name { margin-bottom: 2px; }
+        .keynote-header .affiliation { margin-bottom: 0; }
+
+        .keynote-card .talk-title {
+            font-style: italic;
+            font-size: 0.98em;
+            color: var(--text);
+            line-height: 1.5;
+        }
+
+        /* ── Programme / Schedule ── */
+        .day-schedule {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin: 20px 0 32px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .day-header {
+            background: var(--oxford-blue);
+            color: white;
+            padding: 16px 24px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95em;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .schedule-row {
+            display: grid;
+            grid-template-columns: 130px 1fr;
+            border-bottom: 1px solid var(--border-light);
+            min-height: 48px;
+        }
+
+        .schedule-row:last-child { border-bottom: none; }
+
+        .time-col {
+            padding: 14px 16px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8em;
+            font-weight: 600;
+            color: var(--muted);
+            background: #fafaf8;
+            border-right: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+        }
+
+        .event-col {
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .event-name { font-weight: 600; font-size: 0.98em; }
+
+        .event-detail {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.82em;
+            color: var(--muted);
+        }
+
+        .event-tag {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.67em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 3px 11px;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+
+        .tag-keynote { background: var(--plenary); color: #6a1b9a; }
+        .tag-parallel { background: var(--session-a); color: #1565c0; }
+        .tag-roundtable { background: var(--session-b); color: #e65100; }
+        .tag-social { background: var(--social); color: #bf360c; }
+        .tag-break { background: var(--break-bg); color: #999; }
+
+        .row-break { background: #fafaf8; }
+        .row-keynote { background: #faf5ff; }
+        .row-roundtable { background: #fffaf5; }
+        .row-social { background: #fffcf5; }
+
+        .parallel-note {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.78em;
+            color: var(--nuffield-teal);
+            background: var(--nuffield-teal-light);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        /* ── Key Dates ── */
+        .dates-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 24px 0;
+            font-family: 'Inter', sans-serif;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+        }
+
+        .dates-table th, .dates-table td {
+            text-align: left;
+            padding: 16px 20px;
+            font-size: 0.88em;
+        }
+
+        .dates-table th {
+            background: var(--oxford-blue);
+            color: white;
+            font-weight: 600;
+            font-size: 0.75em;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .dates-table td {
+            border-bottom: 1px solid var(--border-light);
+            background: var(--white);
+        }
+
+        .dates-table tr:last-child td { border-bottom: none; }
+        .dates-table tbody tr:hover td { background: var(--nuffield-teal-light); }
+
+        .date-highlight {
+            color: var(--nuffield-teal);
+            font-weight: 700;
+        }
+
+        /* ── Venue ── */
+        .venue-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin: 24px 0;
+        }
+
+        .venue-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .venue-card h3 { margin-top: 0; }
+
+        /* ── Committee ── */
+        .people-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 14px 0;
+        }
+
+        .person-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 12px 16px;
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow 0.2s;
+        }
+
+        .person-card:hover { box-shadow: var(--shadow-md); }
+
+        .person-card .name {
+            font-weight: 700;
+            font-size: 0.92em;
+        }
+
+        .person-card .affiliation {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.74em;
+            color: var(--muted);
+            margin-top: 2px;
+        }
+
+        .committee-subhead {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.72em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--nuffield-teal);
+            margin: 22px 0 8px;
+        }
+
+        /* ── Contact ── */
+        .contact-box {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            text-align: center;
+            margin: 24px 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .contact-box .email {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1em;
+            font-weight: 600;
+            color: var(--nuffield-teal);
+        }
+
+        /* ── Footer ── */
+        footer {
+            background: var(--oxford-blue);
+            color: rgba(255,255,255,0.6);
+            padding: 48px 24px 36px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8em;
+            line-height: 1.9;
+        }
+
+        .footer-inner {
+            max-width: 1040px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .footer-brand strong {
+            color: var(--warm-gold);
+            font-size: 1.1em;
+        }
+
+        .footer-brand p { margin-top: 8px; }
+
+        .footer-logos {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+        }
+
+        .footer-logos img {
+            height: 40px;
+            width: auto;
+            background: #ffffff;
+            padding: 8px 12px;
+            border-radius: 6px;
+            opacity: 0.92;
+            transition: opacity 0.2s;
+        }
+
+        .footer-logos img:hover { opacity: 1; }
+
+        .footer-bottom {
+            max-width: 1040px;
+            margin: 28px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 0.92em;
+            color: rgba(255,255,255,0.4);
+        }
+
+        /* ── Decorative divider ── */
+        .gold-rule {
+            width: 48px;
+            height: 2px;
+            background: var(--warm-gold);
+            margin: 10px 0 24px;
+        }
+
+        /* ── Print ── */
+        @media print {
+            nav { display: none; }
+            body { background: white; }
+            header { padding: 32px 0 28px; }
+            section { padding: 28px 0; }
+            .cta-row { display: none; }
+            .card:hover, .keynote-card:hover, .person-card:hover, .topic-item:hover { transform: none; box-shadow: none; }
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2em; }
+            header .subtitle { font-size: 1.05em; }
+            header { padding: 56px 0 48px; }
+            .about-grid { grid-template-columns: 1fr; }
+            .about-sidebar { position: static; }
+            .venue-grid { grid-template-columns: 1fr; }
+            .schedule-row { grid-template-columns: 100px 1fr; }
+            .time-col { font-size: 0.72em; padding: 10px 8px; }
+            .logo-row img { height: 32px; }
+            .logo-row .logo-divider { height: 24px; }
+            .footer-inner { grid-template-columns: 1fr; text-align: center; }
+            .footer-logos { justify-content: center; }
+            nav ul { display: none; }
+            nav ul.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--oxford-blue);
+                padding: 8px 28px 20px;
+                box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            }
+            .nav-toggle { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div class="container">
+        <span class="nav-brand">Atkinson Conference 2026</span>
+        <button class="nav-toggle" onclick="document.querySelector('nav ul').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#keynotes">Speakers</a></li>
+            <li><a href="#cfp">Call for Papers</a></li>
+            <li><a href="#programme">Programme</a></li>
+            <li><a href="#dates">Key Dates</a></li>
+            <li><a href="#venue">Venue &amp; Travel</a></li>
+            <li><a href="#committee">Committee &amp; Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero -->
+<header>
+    <div class="container">
+        <div class="hero-overline">10&ndash;11 September 2026 &middot; Nuffield College, Oxford</div>
+        <h1>The Atkinson Conference</h1>
+        <div class="subtitle">on Economic and Social Inequality</div>
+
+        <!-- Sponsor Logos -->
+        <div class="logo-row">
+            <!-- Drop your logo files into docs/img/ and update the src paths below -->
+            <img src="img/nuffield-college-logo.png" alt="Nuffield College, University of Oxford">
+            <span class="logo-divider"></span>
+            <img src="img/dspi-logo.png" alt="Department of Social Policy &amp; Intervention">
+            <span class="logo-divider"></span>
+            <img src="img/inet-oxford-logo.png" alt="Institute for New Economic Thinking at the Oxford Martin School">
+        </div>
+
+        <div class="cta-row">
+            <a href="#cfp" class="cta-btn cta-primary">Submit an Abstract</a>
+            <a href="#programme" class="cta-btn cta-secondary">View Programme</a>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+
+    <!-- ── About ── -->
+    <section id="about">
+        <h2>About the Conference</h2>
+        <div class="gold-rule"></div>
+        <div class="about-grid">
+            <div class="about-main">
+                <p>The Atkinson Conference on Economic and Social Inequality brings together leading researchers from economics, sociology, social policy, and related disciplines for two days of interdisciplinary exchange at Nuffield College, Oxford. The conference is jointly coordinated by the <strong>Department of Social Policy &amp; Intervention (DSPI)</strong>, the <strong>Institute for New Economic Thinking at the Oxford Martin School (INET Oxford)</strong>, and <strong>Nuffield College</strong>.</p>
+                <p>The conference is named in honour of <strong>Sir Anthony (Tony) Atkinson</strong> (1944&ndash;2017), one of the most influential scholars of inequality of the twentieth century. A Fellow of Nuffield College for over two decades and Warden of the College from 1994 to 2005, Atkinson pioneered the measurement of income inequality and poverty, and championed the use of rigorous evidence to inform policy. His work continues to shape how we understand and address inequality around the world.</p>
+                <p>The conference is organised with the blessing of the Atkinson family.</p>
+                <p>We welcome both established and early-career scholars working on questions of economic and social inequality, broadly defined. There are no registration fees.</p>
+            </div>
+            <div class="about-sidebar">
+                <h3>At a Glance</h3>
+                <div class="sidebar-item">
+                    <div class="sidebar-label">Dates</div>
+                    <div class="sidebar-value">10&ndash;11 September 2026</div>
+                </div>
+                <div class="sidebar-item">
+                    <div class="sidebar-label">Venue</div>
+                    <div class="sidebar-value">Nuffield College, Oxford</div>
+                </div>
+                <div class="sidebar-item">
+                    <div class="sidebar-label">Format</div>
+                    <div class="sidebar-value">Keynotes, parallel sessions, panel discussion, conference dinner</div>
+                </div>
+                <div class="sidebar-item">
+                    <div class="sidebar-label">Participants</div>
+                    <div class="sidebar-value">Up to 98</div>
+                </div>
+                <div class="sidebar-item">
+                    <div class="sidebar-label">Registration fee</div>
+                    <div class="sidebar-value" style="color: var(--nuffield-teal); font-weight: 700;">None</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Keynote Speakers ── -->
+    <section id="keynotes">
+        <h2>Speakers &amp; Plenary Events</h2>
+        <div class="gold-rule"></div>
+
+        <div class="keynote-grid">
+            <div class="keynote-card">
+                <span class="role-tag">Keynote Lecture</span>
+                <div class="keynote-header">
+                    <img class="keynote-photo" src="img/Gornick.jpg" alt="Janet Gornick">
+                    <div>
+                        <div class="name">Janet Gornick</div>
+                        <div class="affiliation">City University of New York (CUNY)</div>
+                    </div>
+                </div>
+                <div class="talk-title">&ldquo;High and Rising Economic Inequalities in Affluent Countries: Nature, Causes, and Consequences&rdquo;</div>
+            </div>
+            <div class="keynote-card">
+                <span class="role-tag">Closing Keynote</span>
+                <div class="keynote-header">
+                    <img class="keynote-photo" src="img/Aghion_Philippe_small.jpg" alt="Philippe Aghion">
+                    <div>
+                        <div class="name">Philippe Aghion</div>
+                        <div class="affiliation">Coll&egrave;ge de France &amp; London School of Economics &middot; 2025 Nobel Laureate in Economic Sciences</div>
+                    </div>
+                </div>
+                <div class="talk-title">&ldquo;Creative destructions and the quest for inclusive growth&rdquo;</div>
+            </div>
+            <div class="keynote-card">
+                <span class="role-tag">Opening Panel</span>
+                <div class="keynote-header">
+                    <img class="keynote-photo" src="img/OConnor.png" alt="Sarah O&rsquo;Connor">
+                    <div>
+                        <div class="name">Inequality in the Age of AI</div>
+                        <div class="affiliation">Moderated by Sarah O&rsquo;Connor, Financial Times</div>
+                    </div>
+                </div>
+                <div class="talk-title">A moderated discussion to open the conference</div>
+            </div>
+        </div>
+
+        <p style="margin-top: 20px; font-family: 'Inter', sans-serif; font-size: 0.85em; color: var(--muted);">Additional speakers and panellists to be announced.</p>
+    </section>
+
+    <!-- ── Call for Papers ── -->
+    <section id="cfp">
+        <h2>Call for Papers</h2>
+        <div class="gold-rule"></div>
+        <p class="section-lead">We invite contributions on all aspects of economic and social inequality &mdash; empirical, theoretical, and methodological. There are two ways to participate: a standard presentation of your research, or a short &lsquo;Room for Debate&rsquo; pitch on one of our two prompts.</p>
+
+        <div class="cfp-box">
+            <h3>How to Participate</h3>
+            <p>Please choose one of the two tracks below. All submissions are due by <strong>22 May 2026</strong>; decisions will be communicated by <strong>8 June 2026</strong>.</p>
+
+            <div class="track-grid">
+                <div class="track-card">
+                    <div class="track-label">Track 1</div>
+                    <h4>Standard Presentation</h4>
+                    <p>Submit either a short abstract (<strong>up to 500 words</strong>) or an extended abstract (<strong>up to 4 pages</strong>) describing the research question, data and methods, and main findings or expected contributions.</p>
+                    <p class="submit-link"><!-- PLACEHOLDER: Google Form URL --><a href="#">Submit via Google Form &rarr;</a></p>
+                </div>
+                <div class="track-card">
+                    <div class="track-label">Track 2</div>
+                    <h4>&lsquo;Room for Debate&rsquo; Presentation</h4>
+                    <p>A 5-minute pitch on one of our two Room for Debate prompts:</p>
+                    <ul>
+                        <li><!-- PLACEHOLDER: Prompt 1 -->[Prompt 1 TBC]</li>
+                        <li><!-- PLACEHOLDER: Prompt 2 -->[Prompt 2 TBC]</li>
+                    </ul>
+                    <p>Pitches may draw on your own research or on existing literature. The aim is to take a clear stance on the prompt, make the case for it, and engage in friendly exchange with presenters who may take an opposing view &mdash; a productive airing of competing perspectives to advance the study of inequality.</p>
+                    <p class="submit-link"><!-- PLACEHOLDER: Google Form URL --><a href="#">Submit via Google Form &rarr;</a></p>
+                </div>
+            </div>
+        </div>
+
+        <h3>Topics of Interest</h3>
+        <p>We welcome papers on topics including, but not limited to:</p>
+        <div class="topics-grid">
+            <div class="topic-item"><strong>Income &amp; Wealth Inequality</strong> <span>Measurement, trends, drivers</span></div>
+            <div class="topic-item"><strong>Poverty &amp; Social Exclusion</strong> <span>Dynamics, policies, cross-national comparisons</span></div>
+            <div class="topic-item"><strong>Labour Markets</strong> <span>Wages, precarity, automation, gig economy</span></div>
+            <div class="topic-item"><strong>Redistribution &amp; the Welfare State</strong> <span>Tax-transfer policy, social investment</span></div>
+            <div class="topic-item"><strong>Social Policy Analysis</strong> <span>Welfare states, tax and transfer systems, policy evaluation</span></div>
+            <div class="topic-item"><strong>Health &amp; Education Inequalities</strong> <span>Social determinants, intergenerational mobility</span></div>
+            <div class="topic-item"><strong>Inequality &amp; Technology</strong> <span>AI, digitalisation, platform economies</span></div>
+            <div class="topic-item"><strong>Global &amp; Comparative Perspectives</strong> <span>Developing countries, cross-national analysis</span></div>
+            <div class="topic-item"><strong>Race, Gender &amp; Intersectionality</strong> <span>Structural inequalities, discrimination</span></div>
+            <!-- PLACEHOLDER: Adjust or expand topic list -->
+        </div>
+    </section>
+
+    <!-- ── Programme ── -->
+    <section id="programme">
+        <h2>Programme Overview</h2>
+        <div class="gold-rule"></div>
+        <p class="section-lead">The detailed programme with session topics and paper assignments will be published after abstract decisions. Below is the planned schedule structure.</p>
+
+        <div class="day-schedule">
+            <div class="day-header">Thursday, 10 September 2026</div>
+
+            <div class="schedule-row row-break">
+                <div class="time-col">08:30&ndash;09:00</div>
+                <div class="event-col">
+                    <span class="event-tag tag-break">Registration</span>
+                    <span class="event-name">Registration &amp; coffee</span>
+                </div>
+            </div>
+            <div class="schedule-row row-roundtable">
+                <div class="time-col">09:00&ndash;10:00</div>
+                <div class="event-col">
+                    <div>
+                        <span class="event-tag tag-roundtable">Opening Session</span>
+                        <span class="event-name">Introductory Remarks &amp; Panel on Inequality in the Age of AI</span>
+                        <span class="event-detail">Moderated by Sarah O&rsquo;Connor (Financial Times)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="schedule-row row-break">
+                <div class="time-col">10:00&ndash;10:30</div>
+                <div class="event-col">
+                    <span class="event-tag tag-break">Break</span>
+                    <span class="event-name">Coffee</span>
+                </div>
+            </div>
+            <div class="schedule-row">
+                <div class="time-col">10:30&ndash;12:00</div>
+                <div class="event-col">
+                    <span class="event-tag tag-parallel">Parallel Sessions</span>
+                    <span class="event-name">Paper presentations</span>
+                    <span class="parallel-note">3 parallel rooms</span>
+                </div>
+            </div>
+            <div class="schedule-row row-break">
+                <div class="time-col">12:00&ndash;13:00</div>
+                <div class="event-col">
+                    <span class="event-tag tag-break">Lunch</span>
+                    <span class="event-name">Buffet lunch</span>
+                </div>
+            </div>
+            <div class="schedule-row">
+                <div class="time-col">13:00&ndash;14:30</div>
+                <div class="event-col">
+                    <span class="event-tag tag-parallel">Parallel Sessions</span>
+                    <span class="event-name">Paper presentations</span>
+                    <span class="parallel-note">3 parallel rooms</span>
+                </div>
+            </div>
+            <div class="schedule-row row-break">
+                <div class="time-col">14:30&ndash;15:00</div>
+                <div class="event-col">
+                    <span class="event-tag tag-break">Break</span>
+                    <span class="event-name">Coffee</span>
+                </div>
+            </div>
+            <div class="schedule-row">
+                <div class="time-col">15:00&ndash;16:30</div>
+                <div class="event-col">
+                    <span class="event-tag tag-parallel">Parallel Sessions</span>
+                    <span class="event-name">Paper presentations</span>
+                    <span class="parallel-note">3 parallel rooms</span>
+                </div>
+            </div>
+            <div class="schedule-row row-roundtable">
+                <div class="time-col">16:45&ndash;17:45</div>
+                <div class="event-col">
+                    <span class="event-tag tag-roundtable">Room for Debate</span>
+                    <span class="event-name">Debate-style sessions</span>
+                    <span class="parallel-note">3 parallel rooms</span>
+                </div>
+            </div>
+            <div class="schedule-row row-social">
+                <div class="time-col">18:00&ndash;19:00</div>
+                <div class="event-col">
+                    <span class="event-tag tag-social">Social</span>
+                    <span class="event-name">Drinks reception</span>
+                </div>
+            </div>
+            <div class="schedule-row row-social">
+                <div class="time-col">19:00</div>
+                <div class="event-col">
+                    <span class="event-tag tag-social">Dinner</span>
+                    <span class="event-name">Conference dinner</span>
+                    <span class="event-detail">Nuffield College Dining Hall</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="day-schedule">
+            <div class="day-header">Friday, 11 September 2026</div>
+
+            <div class="schedule-row row-break">
+                <div class="time-col">08:30&ndash;09:00</div>
+                <div class="event-col">
+                    <span class="event-tag tag-break">Coffee</span>
+                    <span class="event-name">Morning coffee &amp; pastries</span>
+                </div>
+            </div>
+            <div class="schedule-row">
+                <div class="time-col">09:00&ndash;10:30</div>
+                <div class="event-col">
+                    <span class="event-tag tag-parallel">Parallel Sessions</span>
+                    <span class="event-name">Paper presentations</span>
+                    <span class="parallel-note">3 parallel rooms</span>
+                </div>
+            </div>
+            <div class="schedule-row row-break">
+                <div class="time-col">10:30&ndash;11:00</div>
+                <div class="event-col">
+                    <span class="event-tag tag-break">Break</span>
+                    <span class="event-name">Coffee</span>
+                </div>
+            </div>
+            <div class="schedule-row row-keynote">
+                <div class="time-col">11:00&ndash;12:15</div>
+                <div class="event-col">
+                    <span class="event-tag tag-keynote">Keynote</span>
+                    <span class="event-name">Janet Gornick</span>
+                </div>
+            </div>
+            <div class="schedule-row row-break">
+                <div class="time-col">12:15&ndash;13:15</div>
+                <div class="event-col">
+                    <span class="event-tag tag-break">Lunch</span>
+                    <span class="event-name">Buffet lunch</span>
+                </div>
+            </div>
+            <div class="schedule-row">
+                <div class="time-col">13:15&ndash;14:45</div>
+                <div class="event-col">
+                    <span class="event-tag tag-parallel">Parallel Sessions</span>
+                    <span class="event-name">Paper presentations</span>
+                    <span class="parallel-note">3 parallel rooms</span>
+                </div>
+            </div>
+            <div class="schedule-row row-break">
+                <div class="time-col">14:45&ndash;15:30</div>
+                <div class="event-col">
+                    <span class="event-tag tag-break">Break</span>
+                    <span class="event-name">Coffee</span>
+                </div>
+            </div>
+            <div class="schedule-row row-keynote">
+                <div class="time-col">15:30&ndash;16:30</div>
+                <div class="event-col">
+                    <div>
+                        <span class="event-tag tag-keynote">Closing Keynote</span>
+                        <span class="event-name">Philippe Aghion</span>
+                        <span class="event-detail">&ldquo;Creative destructions and the quest for inclusive growth&rdquo;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="schedule-row row-social">
+                <div class="time-col">17:00</div>
+                <div class="event-col">
+                    <span class="event-tag tag-social">Optional</span>
+                    <span class="event-name">Informal dinner in Oxford</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Key Dates ── -->
+    <section id="dates">
+        <h2>Key Dates</h2>
+        <div class="gold-rule"></div>
+        <table class="dates-table">
+            <thead>
+                <tr>
+                    <th style="width: 200px;">Date</th>
+                    <th>Milestone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="date-highlight">22 May 2026</td>
+                    <td>Abstract submission deadline</td>
+                </tr>
+                <tr>
+                    <td class="date-highlight">8 June 2026</td>
+                    <td>Notification of acceptance</td>
+                </tr>
+                <!-- PLACEHOLDER: Add registration deadline if applicable -->
+                <tr>
+                    <td class="date-highlight">10&ndash;11 Sept 2026</td>
+                    <td>Conference at Nuffield College, Oxford</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- ── Venue & Travel ── -->
+    <section id="venue">
+        <h2>Venue &amp; Travel</h2>
+        <div class="gold-rule"></div>
+
+        <div class="venue-grid">
+            <div class="venue-card">
+                <h3>Nuffield College</h3>
+                <p>New Road, Oxford OX1 1NF, United Kingdom</p>
+                <p>Nuffield College is located in the heart of Oxford, a short walk from the train station and city centre. All conference sessions, meals, and social events take place on the college grounds.</p>
+
+                <h3>Getting to Oxford</h3>
+                <ul>
+                    <li><strong>By train:</strong> Oxford station is a 5-minute walk from Nuffield College. Direct trains from London Paddington (~1 hr) and other major cities.</li>
+                    <li><strong>By bus:</strong> The Oxford Tube and X90 run frequently from London Victoria (~1.5 hrs).</li>
+                    <li><strong>By air:</strong> London Heathrow (LHR) is the nearest major airport, with direct bus connections to Oxford (~1.5 hrs). Birmingham (BHX) is also convenient.</li>
+                </ul>
+            </div>
+            <div class="venue-card">
+                <h3>Accommodation</h3>
+                <p>Oxford offers a wide range of accommodation options. We recommend booking early, as September is a busy period.</p>
+                <ul>
+                    <!-- PLACEHOLDER: Add specific hotel recommendations -->
+                    <li>Details on recommended hotels and any group booking arrangements will be posted here closer to the conference.</li>
+                </ul>
+
+                <h3>Conference Dinner</h3>
+                <p>A conference dinner will be held on Thursday evening in the Nuffield College Dining Hall. All registered participants are welcome.</p>
+                <!-- PLACEHOLDER: Note if dinner requires separate registration -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Organising Committee ── -->
+    <section id="committee">
+        <h2>Organising Committee &amp; Contact</h2>
+        <div class="gold-rule"></div>
+        <div class="people-grid">
+            <div class="person-card">
+                <div class="name">Zachary Parolin</div>
+                <div class="affiliation">INET Oxford, Department of Social Policy and Intervention &amp; Nuffield College, University of Oxford</div>
+            </div>
+            <div class="person-card">
+                <div class="name">Jonathan Martin</div>
+                <div class="affiliation">INET Oxford, University of Oxford</div>
+            </div>
+            <div class="person-card">
+                <div class="name">Sel&ccedil;uk Beduk</div>
+                <div class="affiliation">Department of Social Policy and Intervention, University of Oxford</div>
+            </div>
+            <div class="person-card">
+                <div class="name">Niki Savage</div>
+                <div class="affiliation">INET Oxford, University of Oxford</div>
+            </div>
+            <div class="person-card">
+                <div class="name">Juliana de Castro Galv&atilde;o</div>
+                <div class="affiliation">Nuffield College, University of Oxford</div>
+            </div>
+        </div>
+
+        <div class="committee-subhead">Heads of Organising Institutions</div>
+        <div class="people-grid">
+            <div class="person-card">
+                <div class="name">Julia Black</div>
+                <div class="affiliation">Nuffield College, University of Oxford</div>
+            </div>
+            <div class="person-card">
+                <div class="name">Eric Beinhocker</div>
+                <div class="affiliation">INET Oxford &amp; Blavatnik School of Government, University of Oxford</div>
+            </div>
+            <div class="person-card">
+                <div class="name">Kenneth Nelson</div>
+                <div class="affiliation">Department of Social Policy and Intervention, University of Oxford</div>
+            </div>
+        </div>
+        <!-- PLACEHOLDER: Add Scientific/Programme Committee if formed -->
+
+        <div class="contact-box" style="margin-top: 28px;">
+            <p>For questions about the conference, submissions, or logistics, please contact the organising committee:</p>
+            <!-- PLACEHOLDER: Replace with actual contact email -->
+            <p class="email" style="margin-top: 16px;"><!-- e.g. atkinson-conference@spi.ox.ac.uk -->[contact email TBC]</p>
+        </div>
+    </section>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <strong>The Atkinson Conference</strong>
+            <p>Named in honour of Sir Tony Atkinson, with the blessing of the Atkinson family.</p>
+        </div>
+        <div class="footer-logos">
+            <img src="img/nuffield-college-logo.png" alt="Nuffield College">
+            <img src="img/dspi-logo.png" alt="DSPI">
+            <img src="img/inet-oxford-logo.png" alt="INET Oxford">
+        </div>
+    </div>
+    <div class="footer-bottom">
+        Nuffield College &middot; Department of Social Policy &amp; Intervention &middot; Institute for New Economic Thinking at the Oxford Martin School
+    </div>
+</footer>
+
+</body>
+</html>
