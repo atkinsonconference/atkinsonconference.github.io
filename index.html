@@ -533,6 +533,63 @@
             line-height: 1.5;
         }
 
+        .panellist-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.72em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--muted);
+            margin: 18px 0 10px;
+        }
+
+        .panellist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .panellist-card {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius);
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+
+        .panellist-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .panellist-photo {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            border: 1px solid var(--border);
+        }
+
+        .panellist-card .name {
+            font-size: 1em;
+            font-weight: 600;
+            color: var(--oxford-blue);
+            margin-bottom: 2px;
+        }
+
+        .panellist-card .affiliation {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.74em;
+            color: var(--muted);
+            line-height: 1.35;
+        }
+
         /* ── Programme / Schedule ── */
         .day-schedule {
             background: var(--white);
@@ -966,7 +1023,32 @@
             </div>
         </div>
 
-        <p style="margin-top: 20px; font-family: 'Inter', sans-serif; font-size: 0.85em; color: var(--muted);">Additional speakers and panellists to be announced.</p>
+        <div class="panellist-label">Roundtable Panellists</div>
+        <div class="panellist-grid">
+            <div class="panellist-card">
+                <img class="panellist-photo" src="img/Frey.jpg" alt="Carl Benedikt Frey">
+                <div>
+                    <div class="name">Carl Benedikt Frey</div>
+                    <div class="affiliation">Oxford Martin School, University of Oxford</div>
+                </div>
+            </div>
+            <div class="panellist-card">
+                <img class="panellist-photo" src="img/Gingrich.png" alt="Jane Gingrich">
+                <div>
+                    <div class="name">Jane Gingrich</div>
+                    <div class="affiliation">Department of Social Policy &amp; Intervention, University of Oxford</div>
+                </div>
+            </div>
+            <div class="panellist-card">
+                <img class="panellist-photo" src="img/Cribb.jpg" alt="Jonathan Cribb">
+                <div>
+                    <div class="name">Jonathan Cribb</div>
+                    <div class="affiliation">Institute for Fiscal Studies</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="margin-top: 18px; font-family: 'Inter', sans-serif; font-size: 0.85em; color: var(--muted);">Additional speakers to be announced.</p>
     </section>
 
     <!-- ── Call for Papers ── -->
