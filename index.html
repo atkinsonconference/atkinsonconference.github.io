@@ -738,6 +738,44 @@
 
         .venue-card h3 { margin-top: 0; }
 
+        .stanne-box {
+            background: var(--nuffield-teal-light);
+            border: 1px solid var(--nuffield-teal);
+            border-left: 4px solid var(--nuffield-teal);
+            border-radius: var(--radius);
+            padding: 22px 24px;
+            margin: 24px 0;
+        }
+
+        .stanne-box h3 { margin-top: 0; color: var(--nuffield-teal); }
+        .stanne-box p:last-child { margin-bottom: 0; }
+
+        .stanne-box .rates {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85em;
+            font-weight: 600;
+            color: var(--oxford-blue);
+        }
+
+        .hotel-grid {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 0 28px;
+            margin: 14px 0 0;
+            padding: 0;
+        }
+
+        .hotel-grid li {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9em;
+            padding: 9px 2px;
+            border-bottom: 1px solid var(--border-light);
+            margin-bottom: 0;
+        }
+
+        .hotel-grid li a { font-weight: 500; }
+
         /* ── Committee ── */
         .people-grid {
             display: grid;
@@ -1300,17 +1338,39 @@
             </div>
             <div class="venue-card">
                 <h3>Accommodation</h3>
-                <p>Oxford offers a wide range of accommodation options. We recommend booking early, as September is a busy period.</p>
-                <ul>
-                    <!-- PLACEHOLDER: Add specific hotel recommendations -->
-                    <li>Details on recommended hotels and any group booking arrangements will be posted here closer to the conference.</li>
-                </ul>
+                <p>We have a block booking of rooms at <strong>St Anne&rsquo;s College</strong>, roughly a 15-minute walk from Nuffield College. Other options are listed below. As Oxford is busy throughout the summer, we encourage attendees to book as early as possible.</p>
 
                 <h3>Conference Dinner</h3>
                 <p>A conference dinner will be held on Thursday evening in the Nuffield College Dining Hall. All registered participants are welcome.</p>
                 <!-- PLACEHOLDER: Note if dinner requires separate registration -->
             </div>
         </div>
+
+        <!-- ── Where to Stay ── -->
+        <h3>Where to Stay</h3>
+        <div class="stanne-box">
+            <h3>Block booking &mdash; St Anne&rsquo;s College</h3>
+            <p>We hold a block of rooms at St Anne&rsquo;s College, approximately a 15-minute walk from Nuffield College. <span class="rates">&pound;90 per night en suite &middot; &pound;60 per night with a shared bathroom.</span> Please see your acceptance letter for the booking code and link. Availability is limited, so we encourage attendees to book as soon as possible.</p>
+        </div>
+
+        <p>Alternatively, there are a number of hotels within a 15-minute walk of the conference venue. We advise booking early, as Oxford attracts many visitors during the summer months. Secure luggage storage will be available on both days of the conference.</p>
+
+        <ul class="hotel-grid">
+            <li><a href="https://www.marriott.com/en-gb/hotels/oxfcy-courtyard-oxford-city-centre/overview/" target="_blank" rel="noopener">The Courtyard by Marriott</a></li>
+            <li><a href="https://www.premierinn.com/gb/en/hotels/england/oxfordshire/oxford/oxford-city-centre-westgate.html?cid=GLBC_OXFORD" target="_blank" rel="noopener">Premier Inn Oxford City Centre</a></li>
+            <li><a href="https://www.malmaison.com/locations/oxford/" target="_blank" rel="noopener">Malmaison Oxford</a></li>
+            <li><a href="https://www.thebocardo.co.uk/" target="_blank" rel="noopener">The Bocardo Hotel</a></li>
+            <li><a href="https://www.gshoxford.co.uk/" target="_blank" rel="noopener">George Street Hotel</a></li>
+            <li><a href="https://www.thebutteryhotel.co.uk/" target="_blank" rel="noopener">The Buttery Hotel</a></li>
+            <li><a href="http://www.vanbrughhousehotel.co.uk/" target="_blank" rel="noopener">Vanbrugh House Hotel</a></li>
+            <li><a href="https://www.graduatehotels.com/oxford-uk" target="_blank" rel="noopener">The Randolph Hotel (Graduate Hotels)</a></li>
+            <li><a href="https://museumhotel.uk/" target="_blank" rel="noopener">Museum Hotel Oxford</a></li>
+            <li><a href="https://www.oldbankhotel.co.uk/" target="_blank" rel="noopener">The Old Bank Hotel</a></li>
+            <li><a href="https://www.royaloxfordhotel.co.uk/" target="_blank" rel="noopener">The Royal Oxford Hotel</a></li>
+            <li><a href="https://www.ethoshotels.co.uk/" target="_blank" rel="noopener">Ethos Hotel Oxford</a></li>
+            <li><a href="https://www.thestoreoxford.com/" target="_blank" rel="noopener">The Store Oxford</a></li>
+            <li><a href="https://www.oldparsonagehotel.co.uk/" target="_blank" rel="noopener">Old Parsonage Hotel</a></li>
+        </ul>
     </section>
 
     <!-- ── Organising Committee ── -->
