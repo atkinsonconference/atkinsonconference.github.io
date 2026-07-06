@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Programme &mdash; The Atkinson Conference on Economic and Social Inequality</title>
+    <meta name="description" content="Full parallel programme and Room for Debate sessions for the Atkinson Conference on Economic and Social Inequality. Nuffield College, Oxford, 10–11 September 2026.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --oxford-blue: #002147;
+            --oxford-blue-light: #0a3060;
+            --nuffield-teal: #1a8a7d;
+            --nuffield-teal-light: #e6f5f3;
+            --warm-gold: #c7a94e;
+            --warm-gold-light: #f5f0e0;
+            --light-bg: #faf9f6;
+            --white: #ffffff;
+            --text: #2c2c2c;
+            --muted: #6b6b6b;
+            --border: #e2dfd8;
+            --border-light: #eeecea;
+            --shadow-sm: 0 1px 3px rgba(0,33,71,0.06);
+            --shadow-md: 0 4px 12px rgba(0,33,71,0.08);
+            --radius: 10px;
+            --radius-lg: 14px;
+
+            --lt-bg: #e8edf4;
+            --lt-text: #002147;
+            --bu-bg: #f5f0e0;
+            --bu-text: #8a7430;
+            --ch-bg: #e6f5f3;
+            --ch-text: #14695f;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Cormorant Garamond', 'Georgia', serif;
+            background: var(--light-bg);
+            color: var(--text);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        /* ── Navigation ── */
+        nav {
+            background: var(--oxford-blue);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            font-family: 'Inter', sans-serif;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+        }
+
+        nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav .nav-brand {
+            color: var(--warm-gold);
+            font-size: 0.82em;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            padding: 14px 0;
+            white-space: nowrap;
+        }
+
+        nav .nav-brand a { color: inherit; text-decoration: none; }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2px;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.72);
+            text-decoration: none;
+            font-size: 0.78em;
+            font-weight: 500;
+            padding: 14px 11px;
+            display: block;
+            transition: color 0.2s;
+            letter-spacing: 0.01em;
+        }
+
+        nav a:hover, nav a:focus { color: var(--warm-gold); }
+        nav a.current { color: var(--warm-gold); }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--warm-gold);
+            font-size: 1.4em;
+            cursor: pointer;
+            padding: 14px 0;
+        }
+
+        /* ── Page hero ── */
+        header {
+            background: linear-gradient(170deg, var(--oxford-blue) 0%, var(--oxford-blue-light) 60%, #0d3868 100%);
+            color: white;
+            padding: 52px 0 46px;
+            text-align: center;
+        }
+
+        .hero-overline {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.72em;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--warm-gold);
+            margin-bottom: 12px;
+        }
+
+        header h1 {
+            font-size: 2.4em;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            margin-bottom: 6px;
+            line-height: 1.15;
+        }
+
+        header .subtitle {
+            font-size: 1.15em;
+            color: rgba(255,255,255,0.7);
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .cta-row {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 28px;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85em;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            letter-spacing: 0.01em;
+        }
+
+        .cta-primary {
+            background: var(--nuffield-teal);
+            color: white;
+            box-shadow: 0 2px 10px rgba(26,138,125,0.3);
+        }
+        .cta-primary:hover { background: #17796e; transform: translateY(-1px); }
+
+        .cta-secondary {
+            background: rgba(255,255,255,0.08);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.25);
+        }
+        .cta-secondary:hover { background: rgba(255,255,255,0.14); }
+
+        /* ── Sections ── */
+        section { padding: 56px 0; }
+        section + section { border-top: 1px solid var(--border-light); }
+
+        h2 {
+            font-size: 1.8em;
+            font-weight: 500;
+            color: var(--oxford-blue);
+            margin-bottom: 8px;
+        }
+
+        .section-lead {
+            font-size: 1.02em;
+            color: var(--muted);
+            margin-bottom: 28px;
+            max-width: 720px;
+        }
+
+        a { color: var(--nuffield-teal); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .gold-rule {
+            width: 48px;
+            height: 2px;
+            background: var(--warm-gold);
+            margin: 10px 0 24px;
+        }
+
+        /* ── Parallel blocks ── */
+        .parallel-block {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin: 0 0 32px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .parallel-header {
+            background: var(--oxford-blue);
+            color: white;
+            padding: 14px 24px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.92em;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .parallel-header .p-time {
+            font-weight: 400;
+            font-size: 0.88em;
+            color: rgba(255,255,255,0.75);
+        }
+
+        .table-wrap { overflow-x: auto; }
+
+        .parallel-block table {
+            width: 100%;
+            min-width: 780px;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        .parallel-block th, .parallel-block td {
+            vertical-align: top;
+            text-align: left;
+            border-right: 1px solid var(--border-light);
+        }
+
+        .parallel-block th:last-child, .parallel-block td:last-child { border-right: none; }
+
+        .room-row th {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.72em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 10px 18px;
+        }
+
+        .room-row th.lt { background: var(--lt-bg); color: var(--lt-text); }
+        .room-row th.bu { background: var(--bu-bg); color: var(--bu-text); }
+        .room-row th.ch { background: var(--ch-bg); color: var(--ch-text); }
+
+        .session-row th {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.84em;
+            font-weight: 700;
+            color: var(--oxford-blue);
+            padding: 14px 18px 10px;
+            border-bottom: 1px solid var(--border-light);
+            line-height: 1.45;
+        }
+
+        .parallel-block td {
+            padding: 14px 18px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .parallel-block tbody tr:last-child td { border-bottom: none; }
+
+        .presenter {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.84em;
+            font-weight: 600;
+            color: var(--text);
+            line-height: 1.45;
+        }
+
+        .presenter .affil {
+            font-weight: 400;
+            color: var(--muted);
+        }
+
+        .chair-tag {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.62em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 1px 8px;
+            border-radius: 20px;
+            background: var(--warm-gold-light);
+            color: #8a7430;
+            margin-left: 6px;
+            vertical-align: 1px;
+        }
+
+        .paper {
+            font-size: 1.02em;
+            font-style: italic;
+            line-height: 1.45;
+            margin-top: 3px;
+            color: var(--text);
+        }
+
+        .programme-note {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.82em;
+            color: var(--muted);
+            margin-top: -12px;
+        }
+
+        /* ── Room for Debate ── */
+        .rfd-meta {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85em;
+            font-weight: 600;
+            color: var(--nuffield-teal);
+            margin-bottom: 16px;
+        }
+
+        .rfd-intro {
+            font-size: 1.08em;
+            max-width: 780px;
+            margin-bottom: 28px;
+        }
+
+        .rfd-rooms {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .rfd-room {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .rfd-room-head {
+            padding: 16px 24px 14px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .rfd-room.lt .rfd-room-head { background: var(--lt-bg); }
+        .rfd-room.bu .rfd-room-head { background: var(--bu-bg); }
+
+        .rfd-room-name {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.82em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--oxford-blue);
+        }
+
+        .rfd-mod {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.78em;
+            color: var(--muted);
+            margin-top: 2px;
+        }
+
+        .rfd-prompt {
+            padding: 18px 24px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .rfd-prompt:last-child { border-bottom: none; }
+
+        .rfd-num {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.68em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--nuffield-teal);
+            margin-bottom: 4px;
+        }
+
+        .rfd-speakers {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9em;
+            font-weight: 600;
+            color: var(--oxford-blue);
+            margin-bottom: 6px;
+        }
+
+        .rfd-q {
+            font-size: 1.05em;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        .rfd-format-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.72em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--muted);
+            margin-bottom: 10px;
+        }
+
+        .rfd-format {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 12px;
+        }
+
+        .fmt {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 18px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .fmt .role {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.68em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--oxford-blue);
+            margin-bottom: 4px;
+        }
+
+        .fmt .desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.76em;
+            color: var(--muted);
+            margin-bottom: 6px;
+        }
+
+        .fmt .mins {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05em;
+            font-weight: 700;
+            color: var(--nuffield-teal);
+        }
+
+        /* ── Footer ── */
+        footer {
+            background: var(--oxford-blue);
+            color: rgba(255,255,255,0.6);
+            padding: 40px 24px 32px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8em;
+            line-height: 1.9;
+            text-align: center;
+        }
+
+        footer strong { color: var(--warm-gold); font-size: 1.1em; }
+        footer a { color: rgba(255,255,255,0.8); }
+
+        /* ── Print ── */
+        @media print {
+            nav { display: none; }
+            body { background: white; }
+            header { padding: 28px 0 24px; }
+            section { padding: 24px 0; }
+            .cta-row { display: none; }
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.7em; }
+            header { padding: 40px 0 36px; }
+            .rfd-rooms { grid-template-columns: 1fr; }
+            nav ul { display: none; }
+            nav ul.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--oxford-blue);
+                padding: 8px 28px 20px;
+                box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            }
+            .nav-toggle { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div class="container">
+        <span class="nav-brand"><a href="index.html">Atkinson Conference 2026</a></span>
+        <button class="nav-toggle" onclick="document.querySelector('nav ul').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+        <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#keynotes">Speakers</a></li>
+            <li><a href="index.html#programme">Overview</a></li>
+            <li><a href="#thursday" class="current">Full Programme</a></li>
+            <li><a href="#debate">Room for Debate</a></li>
+            <li><a href="index.html#venue">Venue &amp; Travel</a></li>
+            <li><a href="index.html#committee">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero -->
+<header>
+    <div class="container">
+        <div class="hero-overline">10&ndash;11 September 2026 &middot; Nuffield College, Oxford</div>
+        <h1>Full Programme</h1>
+        <div class="subtitle">Parallel sessions and Room for Debate</div>
+        <div class="cta-row">
+            <a href="Atkinson_Conference_Pack.pdf" class="cta-btn cta-primary" target="_blank" rel="noopener">Download Conference Pack (PDF)</a>
+            <a href="index.html#programme" class="cta-btn cta-secondary">Programme at a Glance</a>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+
+    <!-- ── Thursday ── -->
+    <section id="thursday">
+        <h2>Parallel Programme &mdash; Thursday, 10 September</h2>
+        <div class="gold-rule"></div>
+        <p class="section-lead">Each parallel block runs three concurrent sessions of four papers. The final presenter in each session serves as chair.</p>
+
+        <div class="parallel-block" id="parallel-1">
+            <div class="parallel-header"><span>Parallel 1</span><span class="p-time">Thursday &middot; 10:30&ndash;12:00</span></div>
+            <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr class="room-row">
+                        <th class="lt">Lecture Theatre</th>
+                        <th class="bu">Butler Room</th>
+                        <th class="ch">Chester Room</th>
+                    </tr>
+                    <tr class="session-row">
+                        <th>Session 1: Wealth Inequality &amp; Taxation</th>
+                        <th>Session 2: Measuring Inequality: Global Data and Methods</th>
+                        <th>Session 3: Institutions, Technology &amp; Inequality</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><div class="presenter">Asher Dvir-Djerassi <span class="affil">(University of Michigan)</span></div><div class="paper">Curbing Wealth Inequality in the 21st Century: Would Wealth Taxation Be Sufficient?</div></td>
+                        <td><div class="presenter">Dean Jolliffe <span class="affil">(World Bank)</span></div><div class="paper">Measuring Global Inequality: How Accounting for Inequality Within the Household Affects the Global Profile</div></td>
+                        <td><div class="presenter">Eugenio Piga <span class="affil">(UC San Diego)</span></div><div class="paper">Prediction Technologies and Inequality Inside Firms</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="presenter">Juan C. Palomino <span class="affil">(Universidad Complutense de Madrid)</span></div><div class="paper">Wealth Concentration, Public Preferences and the Design of a Wealth Tax</div></td>
+                        <td><div class="presenter">Koen Decancq <span class="affil">(University of Antwerp)</span></div><div class="paper">The Evolution of Global Inequality in Well-Being: A Copula-Based Approach</div></td>
+                        <td><div class="presenter">Nicol&aacute;s Soler <span class="affil">(Erasmus University Rotterdam)</span></div><div class="paper">Suspect Families: Do Algorithmic Decision-Making Systems Have Unintended Consequences for the Reproduction of Inequalities?</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="presenter">Kristoffer Berg <span class="affil">(University of Cambridge)</span></div><div class="paper">Taxing Deferred and Mobile Capital Gains</div></td>
+                        <td><div class="presenter">Stephen P. Jenkins <span class="affil">(London School of Economics)</span></div><div class="paper">Assessing the Statistical Significance of Inequality Differences</div></td>
+                        <td><div class="presenter">Bastian Betthaeuser <span class="affil">(Sciences Po, Paris)</span></div><div class="paper">Educational Expansion and Inequality During the Rise and Fall of State Socialism in Europe</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="presenter">Irene Bucelli <span class="affil">(London School of Economics)</span><span class="chair-tag">Chair</span></div><div class="paper">Evaluating Evidence on the Harms of Extreme Wealth</div></td>
+                        <td><div class="presenter">Sabina Alkire <span class="affil">(University of Oxford)</span><span class="chair-tag">Chair</span></div><div class="paper">Child Deprivations &amp; Intrahousehold Inequalities</div></td>
+                        <td><div class="presenter">Juliet-Nil Uraz <span class="affil">(London School of Economics)</span><span class="chair-tag">Chair</span></div><div class="paper">Justice Under Austerity: The Impacts of Reduced Access to Legal Assistance in England and Wales</div></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+
+        <div class="parallel-block" id="parallel-2">
+            <div class="parallel-header"><span>Parallel 2</span><span class="p-time">Thursday &middot; 13:00&ndash;14:30</span></div>
+            <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr class="room-row">
+                        <th class="lt">Lecture Theatre</th>
+                        <th class="bu">Butler Room</th>
+                        <th class="ch">Chester Room</th>
+                    </tr>
+                    <tr class="session-row">
+                        <th>Session 4: Earnings Inequality &amp; Intergenerational Transmission</th>
+                        <th>Session 5: Mechanisms of Social Stratification</th>
+                        <th>Session 6: Poverty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><div class="presenter">Arnaud Lefranc <span class="affil">(CY Cergy Paris)</span></div><div class="paper">Inequality of Opportunity Revisited: Unobserved Family Circumstances and Long-Term Income Opportunities in Sweden</div></td>
+                        <td><div class="presenter">Joshua Choper <span class="affil">(University College London)</span></div><div class="paper">Network Hiring and Intergenerational Persistence</div></td>
+                        <td><div class="presenter">Bruce Bradbury <span class="affil">(UNSW Sydney)</span></div><div class="paper">Low Wages and Child Poverty</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="presenter">Markus J&auml;ntti <span class="affil">(Stockholm University)</span></div><div class="paper">Intergenerational Income Mobility and Assortative Mating in Sweden</div></td>
+                        <td><div class="presenter">Matias Ciaschi <span class="affil">(University of Oxford)</span></div><div class="paper">Social Mobility, Misallocation of Ability, and Economic Performance</div></td>
+                        <td><div class="presenter">Gabriele Mariani <span class="affil">(University of Antwerp)</span></div><div class="paper">When the State Steps Back: Shared Living Arrangements and Income Pooling as a Buffer Against Poverty</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="presenter">Michele Bavaro <span class="affil">(Scuola Normale Superiore)</span></div><div class="paper">Parents&rsquo; Education and Children&rsquo;s Household Income Across Cohorts in Europe</div></td>
+                        <td><div class="presenter">Maria Cristina D&rsquo;Aguanno <span class="affil">(University of Luxembourg)</span></div><div class="paper">Does Social Protection Fuel Income Volatility? Evidence from European Tax-Benefit Systems</div></td>
+                        <td><div class="presenter">Samuel Kofi Tetteh-Baah <span class="affil">(World Bank)</span></div><div class="paper">How Many Children, Men, and Women Are Living in Poverty Globally? An Approach Combining Structural and Machine-Learning Models</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="presenter">Wendy Carlin <span class="affil">(University College London)</span><span class="chair-tag">Chair</span></div><div class="paper">Fair Inequality: Measuring Market Earnings Disparities Not Due to Gender and Parental Advantage in 17 Economies</div></td>
+                        <td><div class="presenter">Daniel McArthur <span class="affil">(University of York)</span><span class="chair-tag">Chair</span></div><div class="paper">Who Gets to Move to Opportunity? Unequal Patterns of Geographic Mobility and the Reproduction of Advantage</div></td>
+                        <td><div class="presenter">Kitty Stewart <span class="affil">(London School of Economics)</span><span class="chair-tag">Chair</span></div><div class="paper">The Limits to Work as a Route Out of Poverty for Families with Children: Evidence from the UK</div></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+
+        <div class="parallel-block" id="parallel-3">
+            <div class="parallel-header"><span>Parallel 3</span><span class="p-time">Thursday &middot; 15:00&ndash;16:30</span></div>
+            <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr class="room-row">
+                        <th class="lt">Lecture Theatre</th>
+                        <th class="bu">Butler Room</th>
+                        <th class="ch">Chester Room</th>
+                    </tr>
+                    <tr class="session-row">
+                        <th>Session 7: Perceptions &amp; Dimensions of Inequality</th>
+                        <th>Session 8: Redistribution, Fiscal Policy &amp; Inequality</th>
+                        <th>Session 9: Labor Markets, Wages &amp; Gender Inequality</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><div class="presenter">Alexi Gugushvili <span class="affil">(University of Oslo)</span></div><div class="paper">Intergenerational Mobility in Respondents&rsquo; Own Words: LLM-Assisted Evidence from Austria, Denmark, and Spain</div></td>
+                        <td><div class="presenter">Julian Le Grand <span class="affil">(London School of Economics)</span></div><div class="paper">Universal Basic Capital and the Privatisation of Welfare</div></td>
+                        <td><div class="presenter">Ignacio Gonzalez <span class="affil">(American University)</span></div><div class="paper">Monopsony Power Wealth</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="presenter">Moritz H&ouml;rl <span class="affil">(Vienna University of Economics and Business)</span></div><div class="paper">What the Public Means by Social Mobility: Dimensions, Indicators and the Great Gatsby Curve</div></td>
+                        <td><div class="presenter">Will Cook <span class="affil">(Manchester Metropolitan University)</span></div><div class="paper">Welfare Cuts and Children&rsquo;s Outcomes: Quasi-Experimental Evidence from the Two-Child Limit</div></td>
+                        <td><div class="presenter">Lukas Lehner <span class="affil">(University College London)</span></div><div class="paper">The Return of Wage Compression in High-Income Countries</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="presenter">Joan Costa-Font <span class="affil">(London School of Economics)</span></div><div class="paper">Narratives of Inequality</div></td>
+                        <td><div class="presenter">Philippe Van Kerm <span class="affil">(University of Luxembourg)</span></div><div class="paper">What Can Money Buy? Inequality and Fiscal Policy Implications of Citizens United v. Federal Election Commission</div></td>
+                        <td><div class="presenter">Kilian Weil <span class="affil">(Hertie School)</span></div><div class="paper">Women&rsquo;s Wages</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="presenter">Karin Heitzmann <span class="affil">(Vienna University of Economics and Business)</span><span class="chair-tag">Chair</span></div><div class="paper">Beyond Single Metrics: Visualizing the Many Dimensions of Poverty</div></td>
+                        <td><div class="presenter">Daria Popova <span class="affil">(University of Essex)</span><span class="chair-tag">Chair</span></div><div class="paper">From Pandemic to Cost-of-Living Crisis: The Distributional Impact of UK Tax and Benefit Policies, 2019&ndash;2023</div></td>
+                        <td><div class="presenter">Birgit Pfau-Effinger <span class="affil">(University of Hamburg)</span><span class="chair-tag">Chair</span></div><div class="paper">Gender Differences in Parental Labour Market Participation: Advancing the Theoretical Framework</div></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Friday ── -->
+    <section id="friday">
+        <h2>Parallel Programme &mdash; Friday, 11 September</h2>
+        <div class="gold-rule"></div>
+
+        <div class="parallel-block" id="parallel-4">
+            <div class="parallel-header"><span>Parallel 4</span><span class="p-time">Friday &middot; 09:00&ndash;10:30</span></div>
+            <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr class="room-row">
+                        <th class="lt">Lecture Theatre</th>
+                        <th class="bu">Butler Room</th>
+                        <th class="ch">Chester Room</th>
+                    </tr>
+                    <tr class="session-row">
+                        <th>Session 10: Social Mobility: Evidence &amp; Long-Run Trends</th>
+                        <th>Session 11: Wealth, Capital Income &amp; Social Structure</th>
+                        <th>Session 12: Climate and Poverty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><div class="presenter">Miles Corak <span class="affil">(City University of New York)</span></div><div class="paper">When Is the Future Written? Upward Mobility, College Attainment, and Sensitive Periods in Child Development</div></td>
+                        <td><div class="presenter">Marco Ranaldi <span class="affil">(University College London)</span></div><div class="paper">Capitalization of the World: Global Distribution of Income from Property, 2000&ndash;2020</div></td>
+                        <td><div class="presenter">W. Matthew Alampay Davis <span class="affil">(University of Oxford)</span></div><div class="paper">Global Income Distributions and Social Welfare Under Climate Change</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="presenter">Javier Terrero-D&aacute;vila <span class="affil">(OECD)</span></div><div class="paper">Who Gets Ahead? Cross-Country Evidence on Intragenerational Income Mobility from Administrative Records</div></td>
+                        <td><div class="presenter">Nhat An Trinh <span class="affil">(WZB Berlin Social Science Center)</span></div><div class="paper">From Work to Wealth? Gender, Generation, and the Institutional Structuring of Earnings&ndash;Wealth Linkages</div></td>
+                        <td><div class="presenter">Diana C. Garcia Rojas <span class="affil">(World Bank)</span></div><div class="paper">Toward a Granular and Comparable Global Poverty Map: Remote Sensing and Estimation Across Borders and Time</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="presenter">Richard Nennstiel <span class="affil">(University of Lausanne)</span></div><div class="paper">Sibling Similarity in Education in Europe: Trends Across Birth Cohorts (1945&ndash;1992) and a Test of the Great Gatsby Curve</div></td>
+                        <td><div class="presenter">Wesley Stubenbord <span class="affil">(Cornell University)</span></div><div class="paper">Silver Spoons, Bootstraps, and Billionaires: The Social Origins of the Contemporary American Economic Elite</div></td>
+                        <td><div class="presenter">Nicolas Werquin <span class="affil">(Federal Reserve Bank of Chicago)</span></div><div class="paper">Extreme Poverty in Wealthy Nations: Evidence from France</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="presenter">Maria Vaalavuo <span class="affil">(Finnish Institute for Health and Welfare)</span><span class="chair-tag">Chair</span></div><div class="paper">Dynasties of Poverty: The Concentration of Poverty in the Extended Family of Poor Children</div></td>
+                        <td><div class="presenter">Rourke O&rsquo;Brien <span class="affil">(Yale University)</span><span class="chair-tag">Chair</span></div><div class="paper">Wealth Inequality and Fertility in the USA, 1970&ndash;2020</div></td>
+                        <td><div class="presenter">Paolo Brunori <span class="affil">(University of Florence)</span><span class="chair-tag">Chair</span></div><div class="paper">The Unequal Effects of Climate on Education in Italy</div></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+
+        <div class="parallel-block" id="parallel-5">
+            <div class="parallel-header"><span>Parallel 5</span><span class="p-time">Friday &middot; 13:15&ndash;14:45</span></div>
+            <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr class="room-row">
+                        <th class="lt">Lecture Theatre</th>
+                        <th class="bu">Butler Room</th>
+                        <th class="ch">Chester Room</th>
+                    </tr>
+                    <tr class="session-row">
+                        <th>Session 13: Inequality Trends: Cross-National and Comparative Evidence</th>
+                        <th>Session 14: Measuring Wealth &amp; Top Incomes</th>
+                        <th>Session 15: Preferences, Redistribution &amp; Inequality</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><div class="presenter">Joe Hasell <span class="affil">(University of Oxford)</span></div><div class="paper">Triangulating Global Inequality: Reconciling World Inequality Database and World Bank Data on Global Incomes</div></td>
+                        <td><div class="presenter">Yonatan Berman <span class="affil">(King&rsquo;s College London)</span></div><div class="paper">Evidence from the Dead: New Estimates of Wealth Inequality Based on the Distribution of Estates</div></td>
+                        <td><div class="presenter">Jakob Dirksen <span class="affil">(LSE and University of Oxford)</span></div><div class="paper">Are Distributive Preferences Domain-Specific?</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="presenter">Jonathan Cribb <span class="affil">(Institute for Fiscal Studies)</span></div><div class="paper">Unpacking Trans-Atlantic Income Inequality</div></td>
+                        <td><div class="presenter">Eleni Karagiannaki <span class="affil">(London School of Economics)</span></div><div class="paper">The Ethnic Wealth Divide in the UK: Mapping Disparities Across Time, Age and Immigrant Generations</div></td>
+                        <td><div class="presenter">Sarah Kuypers <span class="affil">(University of Antwerp)</span></div><div class="paper">Glorious for Whom? Income Inequality in the Netherlands During les Trente Glorieuses</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="presenter">Louis Sirugue <span class="affil">(London School of Economics)</span></div><div class="paper">International Variation in Intergenerational Income Mobility: A Meta-Analysis</div></td>
+                        <td><div class="presenter">Arun Advani <span class="affil">(CenTax)</span></div><div class="paper">Trusts and the Measurement of Top Incomes and Wealth: Evidence from UK Administrative Data</div></td>
+                        <td><div class="presenter">Christopher Pulliam <span class="affil">(Columbia University)</span></div><div class="paper">Universal Cash Transfers and Food Hardship: Evidence from Google Trends Data</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="presenter">Gerlinde Verbist <span class="affil">(University of Antwerp)</span><span class="chair-tag">Chair</span></div><div class="paper">Inequality: What Have We Done? A Decade After Atkinson&rsquo;s Agenda</div></td>
+                        <td><div class="presenter">Roberto Iacono <span class="affil">(Norwegian University of Science and Technology)</span><span class="chair-tag">Chair</span></div><div class="paper">Measuring Wealth: Income Capitalization with Heterogeneous Rates of Return</div></td>
+                        <td><div class="presenter">Michael F&ouml;rster <span class="affil">(Sciences Po Paris)</span><span class="chair-tag">Chair</span></div><div class="paper">Rising Tolerance, Divided Views: Perceived and Preferred Earnings Inequality and the Polarisation of Opinions across Europe</div></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+
+        <p class="programme-note">The final presenter in each session serves as chair. All times Oxford local (BST). Programme subject to change.</p>
+    </section>
+
+    <!-- ── Room for Debate ── -->
+    <section id="debate">
+        <h2>Room for Debate</h2>
+        <div class="gold-rule"></div>
+        <div class="rfd-meta">Thursday 10 September &middot; 16:45&ndash;18:00 &middot; Two parallel rooms &middot; Two prompts per room &middot; 30 minutes each</div>
+
+        <p class="rfd-intro">These sessions bring together pairs of scholars to deliberate on contested questions in inequality research &mdash; exposing the audience to competing perspectives and opening space for the research agendas that emerge when scholars engage directly with one another&rsquo;s arguments.</p>
+
+        <div class="rfd-rooms">
+            <div class="rfd-room lt">
+                <div class="rfd-room-head">
+                    <div class="rfd-room-name">Lecture Theatre</div>
+                    <div class="rfd-mod">Moderated by Sel&ccedil;uk Bed&uuml;k</div>
+                </div>
+                <div class="rfd-prompt">
+                    <div class="rfd-num">Prompt 1</div>
+                    <div class="rfd-speakers">Francisco Ferreira &amp; Franziska Disslbacher</div>
+                    <div class="rfd-q">&ldquo;Intergenerational mobility versus equality of opportunity: Which framework offers a more informative lens for understanding inherited disadvantage?&rdquo;</div>
+                </div>
+                <div class="rfd-prompt">
+                    <div class="rfd-num">Prompt 2</div>
+                    <div class="rfd-speakers">David Brady &amp; Zachary Parolin</div>
+                    <div class="rfd-q">&ldquo;Do Europe and the UK need a new poverty measure? A discussion on whether the at-risk-of-poverty indicator based on 60 percent of median income is still fit for purpose.&rdquo;</div>
+                </div>
+            </div>
+
+            <div class="rfd-room bu">
+                <div class="rfd-room-head">
+                    <div class="rfd-room-name">Butler Room</div>
+                    <div class="rfd-mod">Moderated by Juliana de Castro Galvao</div>
+                </div>
+                <div class="rfd-prompt">
+                    <div class="rfd-num">Prompt 3</div>
+                    <div class="rfd-speakers">Salvatore Morelli &amp; Mike Brewer</div>
+                    <div class="rfd-q">&ldquo;Are inequality researchers too concerned with the ultra-rich? A discussion on the economic, social, and political relevance of studying the top of the income and wealth distributions.&rdquo;</div>
+                </div>
+                <div class="rfd-prompt">
+                    <div class="rfd-num">Prompt 4</div>
+                    <div class="rfd-speakers">Arun Advani &amp; Kristoffer Berg</div>
+                    <div class="rfd-q">&ldquo;Wealth taxes: A discussion of the feasibility of the wealth tax in the UK, and how an ideal wealth tax could be designed and administered.&rdquo;</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rfd-format-label">Structure per prompt &mdash; 30 minutes</div>
+        <div class="rfd-format">
+            <div class="fmt"><div class="role">Speaker A</div><div class="desc">Opening remarks</div><div class="mins">6 min</div></div>
+            <div class="fmt"><div class="role">Speaker B</div><div class="desc">Opening remarks</div><div class="mins">6 min</div></div>
+            <div class="fmt"><div class="role">Moderator</div><div class="desc">Questions &amp; directed exchange</div><div class="mins">4&ndash;5 min</div></div>
+            <div class="fmt"><div class="role">Open Discussion</div><div class="desc">Questions from the floor</div><div class="mins">12&ndash;15 min</div></div>
+        </div>
+    </section>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    <strong>The Atkinson Conference</strong>
+    <p>Nuffield College &middot; Department of Social Policy &amp; Intervention &middot; Institute for New Economic Thinking at the Oxford Martin School</p>
+    <p><a href="index.html">Back to conference home</a></p>
+</footer>
+
+</body>
+</html>

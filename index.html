@@ -236,6 +236,20 @@
         }
         .cta-secondary:hover { background: rgba(255,255,255,0.14); }
 
+        .cta-outline {
+            background: var(--white);
+            color: var(--nuffield-teal);
+            border: 1px solid var(--nuffield-teal);
+        }
+        .cta-outline:hover { background: var(--nuffield-teal-light); }
+
+        .programme-links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 0 0 28px;
+        }
+
         /* ── Sections ── */
         section { padding: 64px 0; }
         section + section { border-top: 1px solid var(--border-light); }
@@ -1086,7 +1100,7 @@
             </div>
         </div>
 
-        <p style="margin-top: 18px; font-family: 'Inter', sans-serif; font-size: 0.85em; color: var(--muted);">Additional speakers to be announced.</p>
+        <p style="margin-top: 18px; font-family: 'Inter', sans-serif; font-size: 0.85em; color: var(--muted);">All paper presentations and Room for Debate sessions are listed on the <a href="programme.html">full programme page</a>.</p>
     </section>
 
     <!-- ── Conference Registration ── -->
@@ -1104,7 +1118,12 @@
     <section id="programme">
         <h2>Programme Overview</h2>
         <div class="gold-rule"></div>
-        <p class="section-lead">The detailed programme with session topics and paper assignments will be published after abstract decisions. Below is the planned schedule structure.</p>
+        <p class="section-lead">The programme at a glance is below. The full parallel programme &mdash; fifteen sessions with all papers and presenters &mdash; and the Room for Debate line-up are on the full programme page.</p>
+
+        <div class="programme-links">
+            <a href="programme.html" class="cta-btn cta-primary">Full Programme &amp; Sessions</a>
+            <a href="Atkinson_Conference_Pack.pdf" class="cta-btn cta-outline" target="_blank" rel="noopener">Conference Pack (PDF)</a>
+        </div>
 
         <div class="day-schedule">
             <div class="day-header">Thursday, 10 September 2026</div>
@@ -1136,8 +1155,8 @@
             <div class="schedule-row">
                 <div class="time-col">10:30&ndash;12:00</div>
                 <div class="event-col">
-                    <span class="event-tag tag-parallel">Parallel Sessions</span>
-                    <span class="event-name">Paper presentations</span>
+                    <span class="event-tag tag-parallel">Parallel 1</span>
+                    <span class="event-name"><a href="programme.html#thursday">Sessions 1&ndash;3</a></span>
                     <span class="parallel-note">3 parallel rooms</span>
                 </div>
             </div>
@@ -1151,8 +1170,8 @@
             <div class="schedule-row">
                 <div class="time-col">13:00&ndash;14:30</div>
                 <div class="event-col">
-                    <span class="event-tag tag-parallel">Parallel Sessions</span>
-                    <span class="event-name">Paper presentations</span>
+                    <span class="event-tag tag-parallel">Parallel 2</span>
+                    <span class="event-name"><a href="programme.html#thursday">Sessions 4&ndash;6</a></span>
                     <span class="parallel-note">3 parallel rooms</span>
                 </div>
             </div>
@@ -1166,17 +1185,17 @@
             <div class="schedule-row">
                 <div class="time-col">15:00&ndash;16:30</div>
                 <div class="event-col">
-                    <span class="event-tag tag-parallel">Parallel Sessions</span>
-                    <span class="event-name">Paper presentations</span>
+                    <span class="event-tag tag-parallel">Parallel 3</span>
+                    <span class="event-name"><a href="programme.html#thursday">Sessions 7&ndash;9</a></span>
                     <span class="parallel-note">3 parallel rooms</span>
                 </div>
             </div>
             <div class="schedule-row row-roundtable">
-                <div class="time-col">16:45&ndash;17:45</div>
+                <div class="time-col">16:45&ndash;18:00</div>
                 <div class="event-col">
                     <span class="event-tag tag-roundtable">Room for Debate</span>
-                    <span class="event-name">Debate-style sessions</span>
-                    <span class="parallel-note">3 parallel rooms</span>
+                    <span class="event-name"><a href="programme.html#debate">Four debates across two rooms</a></span>
+                    <span class="parallel-note">2 parallel rooms</span>
                 </div>
             </div>
             <div class="schedule-row row-social">
@@ -1209,8 +1228,8 @@
             <div class="schedule-row">
                 <div class="time-col">09:00&ndash;10:30</div>
                 <div class="event-col">
-                    <span class="event-tag tag-parallel">Parallel Sessions</span>
-                    <span class="event-name">Paper presentations</span>
+                    <span class="event-tag tag-parallel">Parallel 4</span>
+                    <span class="event-name"><a href="programme.html#friday">Sessions 10&ndash;12</a></span>
                     <span class="parallel-note">3 parallel rooms</span>
                 </div>
             </div>
@@ -1241,8 +1260,8 @@
             <div class="schedule-row">
                 <div class="time-col">13:15&ndash;14:45</div>
                 <div class="event-col">
-                    <span class="event-tag tag-parallel">Parallel Sessions</span>
-                    <span class="event-name">Paper presentations</span>
+                    <span class="event-tag tag-parallel">Parallel 5</span>
+                    <span class="event-name"><a href="programme.html#friday">Sessions 13&ndash;15</a></span>
                     <span class="parallel-note">3 parallel rooms</span>
                 </div>
             </div>
@@ -1267,10 +1286,21 @@
                 <div class="time-col">17:00</div>
                 <div class="event-col">
                     <span class="event-tag tag-social">Optional</span>
-                    <span class="event-name">Informal dinner in Oxford</span>
+                    <span class="event-name">Canalside walk to The Anchor</span>
+                    <span class="event-detail">~30-minute walk along the Oxford Canal</span>
+                </div>
+            </div>
+            <div class="schedule-row row-social">
+                <div class="time-col">17:30</div>
+                <div class="event-col">
+                    <span class="event-tag tag-social">Optional</span>
+                    <span class="event-name">Dinner &amp; drinks at The Anchor</span>
+                    <span class="event-detail">Own cost &middot; The Anchor, Hayfield Road</span>
                 </div>
             </div>
         </div>
+
+        <p style="font-family: 'Inter', sans-serif; font-size: 0.82em; color: var(--muted); margin-top: -8px;">All times Oxford local (BST). Programme subject to change.</p>
     </section>
 
     <!-- ── Key Dates ── -->
