@@ -693,47 +693,6 @@
             font-weight: 500;
         }
 
-        /* ── Key Dates ── */
-        .dates-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-            margin: 24px 0;
-            font-family: 'Inter', sans-serif;
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border);
-        }
-
-        .dates-table th, .dates-table td {
-            text-align: left;
-            padding: 16px 20px;
-            font-size: 0.88em;
-        }
-
-        .dates-table th {
-            background: var(--oxford-blue);
-            color: white;
-            font-weight: 600;
-            font-size: 0.75em;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-        }
-
-        .dates-table td {
-            border-bottom: 1px solid var(--border-light);
-            background: var(--white);
-        }
-
-        .dates-table tr:last-child td { border-bottom: none; }
-        .dates-table tbody tr:hover td { background: var(--nuffield-teal-light); }
-
-        .date-highlight {
-            color: var(--nuffield-teal);
-            font-weight: 700;
-        }
-
         /* ── Venue ── */
         .venue-grid {
             display: grid;
@@ -991,7 +950,6 @@
 
         <div class="cta-row">
             <a href="#programme" class="cta-btn cta-primary">View Programme</a>
-            <a href="#dates" class="cta-btn cta-secondary">Key Dates</a>
         </div>
     </div>
 </header>
@@ -1300,35 +1258,6 @@
         </div>
 
         <p style="font-family: 'Inter', sans-serif; font-size: 0.82em; color: var(--muted); margin-top: -8px;">All times Oxford local (BST). Programme subject to change.</p>
-    </section>
-
-    <!-- ── Key Dates ── -->
-    <section id="dates">
-        <h2>Key Dates</h2>
-        <div class="gold-rule"></div>
-        <table class="dates-table">
-            <thead>
-                <tr>
-                    <th style="width: 200px;">Date</th>
-                    <th>Milestone</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="date-highlight">22 May 2026</td>
-                    <td>Abstract submission deadline <em>(closed)</em></td>
-                </tr>
-                <tr>
-                    <td class="date-highlight">8 June 2026</td>
-                    <td>Notification of acceptance</td>
-                </tr>
-                <!-- PLACEHOLDER: Add registration deadline if applicable -->
-                <tr>
-                    <td class="date-highlight">10&ndash;11 Sept 2026</td>
-                    <td>Conference at Nuffield College, Oxford</td>
-                </tr>
-            </tbody>
-        </table>
     </section>
 
     <!-- ── Venue & Travel ── -->
